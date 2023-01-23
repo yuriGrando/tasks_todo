@@ -4,6 +4,7 @@ const Tasks = require('../models/Tasks');
 
 // BUSCA TODAS AS TAREFAS
 router.get('/', async function(req, res, next) {
+    console.log('tasks')
     await Tasks.findAll().then((content)=>{
 
     res.status(200).json({

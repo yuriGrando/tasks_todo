@@ -32,7 +32,7 @@ const Tasks = db.define('tasks', {
 
     dateFinish: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
     },
 
     dateCreate: {
@@ -49,8 +49,8 @@ const Tasks = db.define('tasks', {
 })
 
 //CRIAR TABELA
-Tasks.sync(/* {
+Tasks.sync({
     alter: true
-} */)
+})
 
 module.exports = Tasks;
